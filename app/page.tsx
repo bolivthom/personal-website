@@ -1,7 +1,7 @@
 
 "use client"
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Github, Linkedin, Code, Database, Smartphone, Zap, Users, Target, Award, Calendar, ArrowRight, ExternalLink, Globe, Server } from 'lucide-react';
+import { Mail, Github, Linkedin, Database, ArrowRight, ExternalLink, Globe, Server } from 'lucide-react';
 
 const BrittanyResumeWebsite = () => {
   const [isVisible, setIsVisible] = useState({});
