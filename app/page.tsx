@@ -641,8 +641,8 @@ const BrittanyResumeWebsite = () => {
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               {[
                 { icon: Mail, label: "Email", value: "bolivthom@gmail.com", href: "mailto:bolivthom@gmail.com" },
-                { icon: Linkedin, label: "LinkedIn", value: "/in/brittanythomas", href: "https://linkedin.com/in/brittanythomas" },
-                { icon: Github, label: "GitHub", value: "/brittanythomas", href: "https://github.com/brittanythomas" }
+                { icon: Linkedin, label: "LinkedIn", value: "/in/brittanythomas", href: "www.linkedin.com/in/bthomas-tech" },
+                { icon: Github, label: "GitHub", value: "/brittanythomas", href: "https://github.com/bolivthom" }
               ].map((contact, index) => (
                 <a 
                   key={index}
