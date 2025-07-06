@@ -150,9 +150,9 @@ const BrittanyResumeWebsite = () => {
 
                 {/* Location & Availability */}
                 <div>
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
                   <p className="text-sm font-light text-gray-400 tracking-wide mb-6">
-                    {/* 📍 Kingston, Jamaica • Currently pursuing MSc Computer Science • Available for Remote Work */}
-                    📍 Kingston, Jamaica \u2022 Currently pursuing MSc Computer Science \u2022 Available for Remote Work
+                    📍 Kingston, Jamaica • Currently pursuing MSc Computer Science • Available for Remote Work
                   </p>
                 </div>
 
