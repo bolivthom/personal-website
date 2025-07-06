@@ -24,7 +24,11 @@ const BrittanyResumeWebsite = () => {
       observer.observe(el);
     });
 
-    const handleMouseMove = (e) => {
+    // const handleMouseMove = (e) => {
+    //   setMousePosition({ x: e.clientX, y: e.clientY });
+    // };
+
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
