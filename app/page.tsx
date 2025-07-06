@@ -155,7 +155,7 @@ const BrittanyResumeWebsite = () => {
                 {/* Location & Availability */}
                 <div>
                   <p className="text-sm font-light text-gray-400 tracking-wide mb-6">
-                    {/* 📍 Kingston, Jamaica • Currently pursuing MSc Computer Science • Available for Remote Work */}
+                    📍 Kingston, Jamaica • Currently pursuing MSc Computer Science • Available for Remote Work
                     {/* 📍 Kingston, Jamaica | Currently pursuing MSc Computer Science | Available for Remote Work */}
                   </p>
                 </div>
@@ -663,7 +663,7 @@ const BrittanyResumeWebsite = () => {
             {/* Footer */}
             <div className="pt-16 border-t border-white/10">
               <p className="text-gray-400 font-light">
-                © 2025 Brittany Thomas. 🇯🇲 Mi code it up nice and proper .
+                © 2025 Brittany Thomas. 🇯🇲 Mi code it up nice and proper.
               </p>
             </div>
           </div>
