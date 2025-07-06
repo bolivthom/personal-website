@@ -40,7 +40,7 @@ const BrittanyResumeWebsite = () => {
     };
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: any) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setCurrentSection(sectionId);
   };
