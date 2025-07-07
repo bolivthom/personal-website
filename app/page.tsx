@@ -328,7 +328,6 @@ const BrittanyResumeWebsite = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
-          {/* <div className="grid md:grid-cols-3 gap-6"> */}
             {[
               {
                 title: "Trackifyx",
