@@ -2,7 +2,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Mail, Github, Linkedin, Database, ArrowRight, ExternalLink, Globe, Server } from 'lucide-react';
-import uwiImage from './assets/images/uwi_crest2.png'
+import uwiImage from './assets/images/uwi_crest.png'
 import uelImage from './assets/images/uel_crest.png'
 
 const BrittanyResumeWebsite = () => {
@@ -269,30 +269,11 @@ const BrittanyResumeWebsite = () => {
                   ))}
                 </div>
 
-                {/* Education
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <h4 className="text-sm font-medium text-gray-900 mb-4">Education</h4>
-                  <div className="space-y-3">
-                    <div>
-                    <div>
-                     <img src={uwiImage.src} alt="Description" className="w-12 h-14" />
-                      <p className="text-sm text-gray-700">MS Computer Science</p>
-                      <p className="text-xs text-gray-500">University of East London (2024-Present)</p>
-                    </div>
-                    </div>
-                    <div>
-                      <img src={uelImage.src} alt="Description" className="w-21 h-10" />
-                      <p className="text-sm text-gray-700">BS Computer Science</p>
-                      <p className="text-xs text-gray-500">University of the West Indies (2015-2022)</p>
-                    </div>
-                  </div>
-                </div> */}
-
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <h4 className="text-sm font-medium text-gray-900 mb-4">Education</h4>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
-                      <img src={uelImage.src} alt="Description" className="w-21 h-10 object-contain mr-0 p-0" />
+                      <img src={uelImage.src} alt="Description" className="w-21 h-10 object-contain m-0 p-0" />
                       <div>
                         <p className="text-sm text-gray-700">MS Computer Science</p>
                         <p className="text-xs text-gray-500">University of East London (2024-Present)</p>
