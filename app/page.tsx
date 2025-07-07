@@ -299,7 +299,7 @@ const BrittanyResumeWebsite = () => {
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <img src={uwiImage.src} alt="Description" className="w-12 h-14 object-contain mr-5 ml-4 p-0" />
+                      <img src={uwiImage.src} alt="Description" className="w-12 h-14 object-contain mr-5 ml-5 p-0" />
                       <div>
                         <p className="text-sm text-gray-700">BS Computer Science</p>
                         <p className="text-xs text-gray-500">University of the West Indies (2015-2022)</p>
