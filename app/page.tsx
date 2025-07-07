@@ -104,7 +104,7 @@ const BrittanyResumeWebsite = () => {
           <div className="flex items-center justify-center min-h-[80vh]">
             <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-6xl">
               {/* Left Side - Profile Photo */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end mt-35 lg:mt-0">
                 <div className="relative">
                   {/* Purple Geometric Background Shapes */}
                   <div className="absolute -right-6 -top-6 w-32 h-32 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-2xl transform rotate-12 opacity-80"></div>
@@ -327,7 +327,7 @@ const BrittanyResumeWebsite = () => {
             <div className={`w-16 h-px bg-gradient-to-r from-violet-600 to-indigo-600 mx-auto transform transition-all duration-1000 delay-200 ${isVisible.work ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'}`}></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-16">
             {[
               {
                 title: "Trackifyx",
