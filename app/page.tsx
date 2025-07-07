@@ -2,6 +2,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Mail, Github, Linkedin, Database, ArrowRight, ExternalLink, Globe, Server } from 'lucide-react';
+import uwiImage from './assets/images/uwi_crest2.png'
+import uelImage from './assets/images/uel_crest.png'
 
 const BrittanyResumeWebsite = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -48,7 +50,7 @@ const BrittanyResumeWebsite = () => {
   return (
     <div className="min-h-screen bg-white font-light text-gray-900 overflow-x-hidden">
       {/* Cursor Follower */}
-      <div 
+      <div
         className="fixed w-4 h-4 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-150 ease-out"
         style={{
           left: mousePosition.x - 8,
@@ -69,9 +71,8 @@ const BrittanyResumeWebsite = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className={`text-sm font-light tracking-wider uppercase transition-all duration-500 hover:text-violet-600 relative group ${
-                    currentSection === item ? 'text-violet-600' : 'text-gray-600'
-                  }`}
+                  className={`text-sm font-light tracking-wider uppercase transition-all duration-500 hover:text-violet-600 relative group ${currentSection === item ? 'text-violet-600' : 'text-gray-600'
+                    }`}
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
@@ -92,7 +93,7 @@ const BrittanyResumeWebsite = () => {
             <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-indigo-400 rounded-full animate-ping"></div>
             <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-violet-200 rounded-full animate-bounce"></div>
           </div>
-          
+
           {/* Large Purple Background Shape */}
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/3">
             <div className="hidden lg:block w-96 h-96 bg-gradient-to-br from-violet-600 to-indigo-700 rounded-3xl transform rotate-12 opacity-90"></div>
@@ -108,7 +109,7 @@ const BrittanyResumeWebsite = () => {
                   {/* Purple Geometric Background Shapes */}
                   <div className="absolute -right-6 -top-6 w-32 h-32 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-2xl transform rotate-12 opacity-80"></div>
                   <div className="absolute -left-6 bottom-6 w-24 h-24 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl transform -rotate-12 opacity-70"></div>
-                  
+
                   {/* Profile Photo Container */}
                   <div className="relative z-10 w-72 h-72 bg-white rounded-3xl p-5 shadow-2xl">
                     <div className="w-full h-full bg-gradient-to-br from-violet-100 to-indigo-100 rounded-2xl overflow-hidden relative">
@@ -116,12 +117,12 @@ const BrittanyResumeWebsite = () => {
                       <div className="w-full h-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
                         <div className="text-7xl font-light text-gray-600">BT</div>
                       </div>
-                      
+
                       {/* Decorative overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-violet-600/10 to-transparent"></div>
                     </div>
                   </div>
-                  
+
                   {/* Floating accent elements */}
                   <div className="absolute -top-3 -right-3 w-6 h-6 bg-violet-400 rounded-full animate-pulse"></div>
                   <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-indigo-400 rounded-full animate-bounce"></div>
@@ -147,7 +148,7 @@ const BrittanyResumeWebsite = () => {
                   </p>
                   <div className="w-24 h-px bg-gradient-to-r from-violet-600 to-indigo-600 mx-auto lg:mx-0"></div>
                   <p className="text-lg font-light text-gray-500 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Crafting seamless web and mobile applications with expertise in React, TypeScript, and Laravel. 
+                    Crafting seamless web and mobile applications with expertise in React, TypeScript, and Laravel.
                     Specializing in fintech and insurance platforms with a passion for user-centric design.
                   </p>
                 </div>
@@ -162,7 +163,7 @@ const BrittanyResumeWebsite = () => {
 
                 {/* CTA */}
                 <div>
-                  <button 
+                  <button
                     onClick={() => scrollToSection('about')}
                     className="group inline-flex items-center space-x-3 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-8 py-4 rounded-full font-light tracking-wide transition-all duration-500 hover:shadow-2xl hover:shadow-violet-600/25 transform hover:-translate-y-1"
                   >
@@ -189,20 +190,20 @@ const BrittanyResumeWebsite = () => {
         <div className="absolute inset-0 pointer-events-none">
           {/* Large Purple Rectangle - Left Side */}
           {/* <div className="absolute -left-32 top-20 w-96 h-96 bg-gradient-to-br from-violet-600 to-indigo-700 rounded-3xl transform rotate-12 opacity-90"></div> */}
-          
+
           {/* Medium Purple Square - Top Right */}
           <div className="absolute -right-16 -top-16 w-64 h-64 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl transform -rotate-45 opacity-80"></div>
-          
+
           {/* Small Accent Shape - Middle */}
           <div className="absolute right-1/3 top-1/2 w-32 h-32 bg-gradient-to-br from-violet-400 to-indigo-500 rounded-full opacity-60"></div>
-          
+
           {/* Bottom Left Triangle */}
           <div className="absolute -left-20 bottom-20 w-0 h-0 border-l-[150px] border-r-[150px] border-b-[200px] border-l-transparent border-r-transparent border-b-violet-300 opacity-70 transform rotate-45"></div>
-          
+
           {/* Subtle Grid Overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-[size:80px_80px]"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             {/* Left Content */}
@@ -216,11 +217,11 @@ const BrittanyResumeWebsite = () => {
 
               <div className="space-y-8">
                 <p className="text-xl font-light text-gray-600 leading-relaxed">
-                  I am a passionate Full-Stack Developer with extensive experience building web and mobile applications 
-                  using React.js, TypeScript, and Laravel. I focus on creating efficient, user-friendly solutions for 
+                  I am a passionate Full-Stack Developer with extensive experience building web and mobile applications
+                  using React.js, TypeScript, and Laravel. I focus on creating efficient, user-friendly solutions for
                   fintech and insurance platforms, with a proven track record of delivering complex features and comprehensive documentation.
                 </p>
-                
+
                 <div className="space-y-6">
                   <div className="group">
                     <h3 className="text-lg font-medium text-gray-900 mb-3 flex items-center">
@@ -228,18 +229,18 @@ const BrittanyResumeWebsite = () => {
                       Current Focus
                     </h3>
                     <p className="text-gray-600 font-light pl-6">
-                      Pursuing my Master of Science in Computer Science at University of East London while 
+                      Pursuing my Master of Science in Computer Science at University of East London while
                       building innovative solutions for e-commerce and insurance industries.
                     </p>
                   </div>
-                  
+
                   <div className="group">
                     <h3 className="text-lg font-medium text-gray-900 mb-3 flex items-center">
                       <div className="w-2 h-2 bg-indigo-600 rounded-full mr-4"></div>
                       Expertise
                     </h3>
                     <p className="text-gray-600 font-light pl-6">
-                      Specialized in React.js, React Native, TypeScript, and Laravel development with strong 
+                      Specialized in React.js, React Native, TypeScript, and Laravel development with strong
                       experience in API integrations, automated testing, and comprehensive technical documentation.
                     </p>
                   </div>
@@ -267,19 +268,44 @@ const BrittanyResumeWebsite = () => {
                     </div>
                   ))}
                 </div>
-                
-                {/* Education */}
+
+                {/* Education
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <h4 className="text-sm font-medium text-gray-900 mb-4">Education</h4>
                   <div className="space-y-3">
                     <div>
+                    <div>
+                     <img src={uwiImage.src} alt="Description" className="w-12 h-14" />
                       <p className="text-sm text-gray-700">MS Computer Science</p>
                       <p className="text-xs text-gray-500">University of East London (2024-Present)</p>
                     </div>
+                    </div>
                     <div>
+                      <img src={uelImage.src} alt="Description" className="w-21 h-10" />
                       <p className="text-sm text-gray-700">BS Computer Science</p>
                       <p className="text-xs text-gray-500">University of the West Indies (2015-2022)</p>
                     </div>
+                  </div>
+                </div> */}
+
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <h4 className="text-sm font-medium text-gray-900 mb-4">Education</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <img src={uwiImage.src} alt="Description" className="w-12 h-14 object-contain mr-5 ml-4 p-0" />
+                      <div>
+                        <p className="text-sm text-gray-700">MS Computer Science</p>
+                        <p className="text-xs text-gray-500">University of East London (2024-Present)</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <img src={uelImage.src} alt="Description" className="w-21 h-10 object-contain mr-0 p-0" />
+                      <div>
+                        <p className="text-sm text-gray-700">BS Computer Science</p>
+                        <p className="text-xs text-gray-500">University of the West Indies (2015-2022)</p>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -294,14 +320,14 @@ const BrittanyResumeWebsite = () => {
         <div className="absolute inset-0 pointer-events-none">
           {/* Large Circle - Top Right */}
           <div className="absolute -right-40 -top-20 w-80 h-80 bg-gradient-to-br from-violet-100 to-indigo-200 rounded-full opacity-50"></div>
-          
+
           {/* Rectangle - Bottom Left */}
           <div className="absolute -left-24 bottom-32 w-72 h-48 bg-gradient-to-r from-indigo-100 to-violet-100 rounded-2xl transform rotate-12 opacity-60"></div>
-          
+
           {/* Small Floating Squares */}
           <div className="absolute right-1/4 top-1/4 w-16 h-16 bg-violet-200 rounded-lg transform rotate-45 opacity-40"></div>
           <div className="absolute left-1/3 bottom-1/3 w-12 h-12 bg-indigo-200 rounded-lg transform -rotate-12 opacity-50"></div>
-          
+
           {/* Dot Pattern */}
           <div className="absolute top-16 left-16">
             <div className="grid grid-cols-6 gap-4">
@@ -311,7 +337,7 @@ const BrittanyResumeWebsite = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className={`text-5xl md:text-6xl font-extralight tracking-tight text-gray-900 mb-6 transform transition-all duration-1000 ${isVisible.work ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
@@ -345,7 +371,7 @@ const BrittanyResumeWebsite = () => {
                 company: "Smart Mobile Solutions"
               }
             ].map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className={`group cursor-pointer transform transition-all duration-1000 ${isVisible.work ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}
                 style={{ transitionDelay: `${index * 300}ms` }}
@@ -372,7 +398,7 @@ const BrittanyResumeWebsite = () => {
                     {/* Metrics */}
                     <div className="flex space-x-4">
                       {project.metrics.map((metric, metricIndex) => (
-                        <span 
+                        <span
                           key={metricIndex}
                           className="px-3 py-1 bg-gray-50 text-gray-600 text-xs font-light rounded-full"
                         >
@@ -384,7 +410,7 @@ const BrittanyResumeWebsite = () => {
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, techIndex) => (
-                        <span 
+                        <span
                           key={techIndex}
                           className="px-3 py-1 border border-gray-200 text-gray-700 text-xs font-light rounded-full hover:border-violet-300 transition-colors duration-300"
                         >
@@ -395,7 +421,7 @@ const BrittanyResumeWebsite = () => {
 
                     {/* Learn More */}
                     <div className="pt-4">
-                      <a 
+                      <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -417,7 +443,7 @@ const BrittanyResumeWebsite = () => {
               <h3 className="text-2xl font-light text-gray-800 mb-4">Additional Projects</h3>
               <div className="w-12 h-px bg-gray-300 mx-auto"></div>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
@@ -467,23 +493,23 @@ const BrittanyResumeWebsite = () => {
         <div className="absolute inset-0 pointer-events-none">
           {/* Large Diamond Shape */}
           <div className="absolute right-0 top-1/3 w-64 h-64 bg-gradient-to-br from-violet-300 to-indigo-400 transform rotate-45 rounded-3xl opacity-20"></div>
-          
+
           {/* Hexagon Shape - Left */}
           <div className="absolute -left-32 top-20">
-            <div className="w-48 h-48 bg-gradient-to-br from-indigo-200 to-violet-300 opacity-30" 
-                 style={{clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'}}>
+            <div className="w-48 h-48 bg-gradient-to-br from-indigo-200 to-violet-300 opacity-30"
+              style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)' }}>
             </div>
           </div>
-          
+
           {/* Floating Rectangles */}
           <div className="absolute right-1/3 bottom-20 w-40 h-24 bg-violet-200 rounded-xl transform -rotate-12 opacity-40"></div>
           <div className="absolute left-1/4 bottom-32 w-32 h-20 bg-indigo-200 rounded-lg transform rotate-6 opacity-35"></div>
-          
+
           {/* Abstract Lines */}
           <div className="absolute top-16 right-16 w-1 h-32 bg-gradient-to-b from-violet-300 to-transparent transform rotate-12"></div>
           <div className="absolute bottom-16 left-20 w-1 h-24 bg-gradient-to-b from-indigo-300 to-transparent transform -rotate-12"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className={`text-5xl md:text-6xl font-extralight tracking-tight text-gray-900 mb-6 transform transition-all duration-1000 ${isVisible.experience ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
@@ -513,7 +539,7 @@ const BrittanyResumeWebsite = () => {
                 color: "purple"
               }
             ].map((category, index) => (
-              <div 
+              <div
                 key={index}
                 className={`group transform transition-all duration-1000 ${isVisible.experience ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}
                 style={{ transitionDelay: `${index * 200}ms` }}
@@ -551,7 +577,7 @@ const BrittanyResumeWebsite = () => {
               <h3 className="text-2xl font-light text-gray-800 mb-4">Professional Experience</h3>
               <div className="w-12 h-px bg-gray-300 mx-auto"></div>
             </div>
-            
+
             <div className="space-y-8">
               {[
                 {
@@ -606,23 +632,23 @@ const BrittanyResumeWebsite = () => {
       <section id="contact" data-animate className="py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
         {/* Enhanced Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-        
+
         {/* Additional Geometric Elements */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Large Glowing Circle */}
           <div className="absolute -right-32 top-20 w-96 h-96 bg-gradient-to-br from-violet-600/20 to-indigo-600/10 rounded-full blur-3xl"></div>
-          
+
           {/* Left Side Triangle */}
           <div className="absolute -left-20 bottom-20 w-0 h-0 border-l-[120px] border-r-[120px] border-b-[160px] border-l-transparent border-r-transparent border-b-violet-500/20"></div>
-          
+
           {/* Floating Squares */}
           <div className="absolute right-1/4 bottom-1/4 w-8 h-8 bg-violet-400/30 rounded transform rotate-45"></div>
           <div className="absolute left-1/3 top-1/3 w-6 h-6 bg-indigo-400/40 rounded transform rotate-12"></div>
-          
+
           {/* Subtle Connecting Lines */}
           <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
           <div className={`space-y-12 transform transition-all duration-1000 ${isVisible.contact ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             {/* Heading */}
@@ -632,7 +658,7 @@ const BrittanyResumeWebsite = () => {
               </h2>
               <div className="w-16 h-px bg-gradient-to-r from-violet-400 to-indigo-400 mx-auto"></div>
               <p className="text-xl font-light text-gray-300 max-w-2xl mx-auto">
-                Ready to collaborate on innovative web and mobile solutions? 
+                Ready to collaborate on innovative web and mobile solutions?
                 Let's discuss how we can build something amazing together.
               </p>
             </div>
@@ -644,7 +670,7 @@ const BrittanyResumeWebsite = () => {
                 { icon: Linkedin, label: "LinkedIn", value: "/in/brittanythomas", href: "https://www.linkedin.com/in/bthomas-tech/" },
                 { icon: Github, label: "GitHub", value: "/brittanythomas", href: "https://github.com/bolivthom" }
               ].map((contact, index) => (
-                <a 
+                <a
                   key={index}
                   href={contact.href}
                   className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-violet-400/30 transition-all duration-500 transform hover:-translate-y-2"
