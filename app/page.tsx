@@ -327,8 +327,8 @@ const BrittanyResumeWebsite = () => {
             <div className={`w-16 h-px bg-gradient-to-r from-violet-600 to-indigo-600 mx-auto transform transition-all duration-1000 delay-200 ${isVisible.work ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'}`}></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 sm:px-0">
-          {/* <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 px-4 sm:px-0"> */}
+          <div className="grid lg:grid-cols-2 gap-6">
+          {/* <div className="grid md:grid-cols-3 gap-6"> */}
             {[
               {
                 title: "Trackifyx",
