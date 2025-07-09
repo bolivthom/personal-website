@@ -4,11 +4,15 @@ import React, { useState, useEffect } from 'react';
 import { Mail, Github, Linkedin, Database, ArrowRight, ExternalLink, Globe, Server } from 'lucide-react';
 import uwiImage from './assets/images/uwi_crest.png'
 import uelImage from './assets/images/uel_crest.png'
+import myImage from './assets/images/me.png'
+import { AnimatedLogo } from './components/logo/animatedLogo';
+
 
 const BrittanyResumeWebsite = () => {
   const [isVisible, setIsVisible] = useState({});
   const [currentSection, setCurrentSection] = useState('home');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,7 +49,14 @@ const BrittanyResumeWebsite = () => {
   const scrollToSection = (sectionId: any) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setCurrentSection(sectionId);
+    setMobileMenuOpen(false);
   };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+
 
   return (
     <div className="min-h-screen bg-white font-light text-gray-900 overflow-x-hidden">
@@ -64,7 +75,13 @@ const BrittanyResumeWebsite = () => {
         <div className="max-w-7xl mx-auto px-8 py-6">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-extralight tracking-widest text-gray-900">
-              BRITTANY THOMAS
+              {/* BRITTANY THOMAS */}
+              <div
+                className="md:cursor-default cursor-pointer"
+                onClick={toggleMobileMenu}
+              >
+                <AnimatedLogo />
+              </div>
             </div>
             <div className="hidden md:flex space-x-12">
               {['home', 'about', 'work', 'experience', 'contact'].map((item) => (
@@ -80,106 +97,191 @@ const BrittanyResumeWebsite = () => {
               ))}
             </div>
           </div>
+
+          {/* Mobile Menu */}
+          <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}>
+            <div className="pt-6 pb-2 space-y-4">
+              {['home', 'about', 'work', 'experience', 'contact'].map((item, index) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className={`block w-full text-left text-lg font-light tracking-wider uppercase transition-all duration-500 hover:text-violet-600 relative group py-2 transform transition-transform ${currentSection === item ? 'text-violet-600' : 'text-gray-600'
+                    } ${mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    }`}
+                  style={{
+                    transitionDelay: mobileMenuOpen ? `${index * 100}ms` : '0ms'
+                  }}
+                >
+                  {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
+      {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Sophisticated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-violet-50/30">
-          {/* Geometric Patterns */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-violet-300 rounded-full animate-pulse"></div>
-            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-indigo-400 rounded-full animate-ping"></div>
-            <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-violet-200 rounded-full animate-bounce"></div>
+          {/* Dynamic Floating Elements */}
+          <div className="absolute inset-0">
+            {/* Large Animated Orbs */}
+            <div className="absolute top-1/4 left-1/6 w-32 h-32 bg-gradient-to-br from-violet-300/40 to-indigo-400/30 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-gradient-to-br from-indigo-400/30 to-purple-300/40 rounded-full blur-lg animate-bounce"></div>
+            <div className="absolute top-20 right-1/3 w-20 h-20 bg-gradient-to-br from-pink-300/20 to-violet-400/30 rounded-full blur-lg animate-pulse"></div>
+            <div className="absolute bottom-20 left-1/5 w-28 h-28 bg-gradient-to-br from-cyan-300/15 to-indigo-400/25 rounded-full blur-xl animate-bounce"></div>
+
+            {/* Geometric Accent Shapes */}
+            <div className="absolute top-1/3 right-1/6 w-16 h-16 bg-violet-200/50 rounded-xl transform rotate-45 animate-pulse"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-indigo-200/40 rounded-lg transform -rotate-12 animate-bounce"></div>
+            <div className="absolute top-1/5 left-1/4 w-8 h-8 bg-purple-300/60 rounded-full transform rotate-12 animate-ping"></div>
+            <div className="absolute bottom-1/5 right-1/5 w-10 h-10 bg-violet-300/50 rounded-xl transform -rotate-45 animate-pulse"></div>
+
+            {/* Floating Triangles */}
+            <div className="absolute top-1/6 right-1/8 w-0 h-0 border-l-8 border-r-8 border-b-12 border-l-transparent border-r-transparent border-b-violet-200/40 transform rotate-12 animate-bounce"></div>
+            <div className="absolute bottom-1/6 left-1/8 w-0 h-0 border-l-6 border-r-6 border-b-10 border-l-transparent border-r-transparent border-b-indigo-300/50 transform -rotate-45 animate-pulse"></div>
+
+            {/* Hexagon Shapes */}
+            <div className="absolute top-3/4 left-1/6 w-12 h-12 bg-gradient-to-br from-violet-200/40 to-indigo-200/30 transform rotate-30 animate-spin-slow"
+              style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)', animationDuration: '20s' }}></div>
+            <div className="absolute top-1/8 right-1/4 w-8 h-8 bg-gradient-to-br from-purple-200/50 to-pink-200/40 transform rotate-60 animate-spin-slow"
+              style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)', animationDuration: '25s' }}></div>
+
+            {/* Subtle Grid Pattern */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+
+            {/* Dynamic Lines */}
+            <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-300/30 to-transparent"></div>
+            <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-200/20 to-transparent"></div>
+            <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-200/15 to-transparent"></div>
+
+            {/* Diagonal Lines */}
+            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-violet-200/20 to-transparent transform rotate-12"></div>
+            <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-indigo-200/15 to-transparent transform -rotate-12"></div>
+
+            {/* Radial Gradients */}
+            <div className="absolute top-1/5 left-1/2 w-40 h-40 bg-radial-gradient from-violet-300/10 to-transparent rounded-full"></div>
+            <div className="absolute bottom-1/5 right-1/2 w-32 h-32 bg-radial-gradient from-indigo-300/15 to-transparent rounded-full"></div>
           </div>
 
-          {/* Large Purple Background Shape */}
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/3">
-            <div className="hidden lg:block w-96 h-96 bg-gradient-to-br from-violet-600 to-indigo-700 rounded-3xl transform rotate-12 opacity-90"></div>
-          </div>
+          {/* Large Abstract Shapes */}
+          <div className="absolute -left-32 top-1/4 w-64 h-64 bg-gradient-to-br from-violet-600/10 to-indigo-700/5 rounded-full blur-3xl"></div>
+          <div className="absolute -right-40 bottom-1/4 w-80 h-80 bg-gradient-to-br from-indigo-500/8 to-purple-600/5 rounded-full blur-3xl"></div>
+          <div className="absolute -top-20 left-1/2 w-96 h-96 bg-gradient-to-br from-purple-400/5 to-pink-500/3 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-32 right-1/3 w-72 h-72 bg-gradient-to-br from-cyan-400/8 to-indigo-600/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8">
-          <div className="flex items-center justify-center min-h-[80vh]">
-            <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-6xl">
-              {/* Left Side - Profile Photo */}
-              <div className="flex justify-center lg:justify-end mt-35 lg:mt-0">
-                <div className="relative">
-                  {/* Purple Geometric Background Shapes */}
-                  <div className="absolute -right-6 -top-6 w-32 h-32 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-2xl transform rotate-12 opacity-80"></div>
-                  <div className="absolute -left-6 bottom-6 w-24 h-24 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl transform -rotate-12 opacity-70"></div>
-
-                  {/* Profile Photo Container */}
-                  <div className="relative z-10 w-72 h-72 bg-white rounded-3xl p-5 shadow-2xl">
-                    <div className="w-full h-full bg-gradient-to-br from-violet-100 to-indigo-100 rounded-2xl overflow-hidden relative">
-                      {/* Placeholder for your photo */}
-                      <div className="w-full h-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
-                        <div className="text-7xl font-light text-gray-600">BT</div>
-                      </div>
-
-                      {/* Decorative overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-violet-600/10 to-transparent"></div>
-                    </div>
-                  </div>
-
-                  {/* Floating accent elements */}
-                  <div className="absolute -top-3 -right-3 w-6 h-6 bg-violet-400 rounded-full animate-pulse"></div>
-                  <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-indigo-400 rounded-full animate-bounce"></div>
-                </div>
-              </div>
-
-              {/* Right Side - Name & Text */}
-              <div className="text-center lg:text-left space-y-8">
-                {/* Main Heading */}
-                <div className="space-y-4">
-                  <h1 className="text-6xl md:text-8xl font-extralight tracking-tight text-gray-900">
+          <div className="text-center">
+            {/* Elegant Typography Layout */}
+            <div className="space-y-8 pt-32">
+              {/* Main Name Display */}
+              <div className="space-y-6">
+                <div>
+                  <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-extralight tracking-tight text-gray-900 leading-none transition-all duration-700 ease-out">
                     BRITTANY
                   </h1>
-                  <h1 className="text-6xl md:text-8xl font-extralight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">
+                </div>
+                <div>
+                  <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-extralight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 leading-none transition-all duration-700 ease-out">
                     THOMAS
                   </h1>
                 </div>
 
-                {/* Subtitle */}
-                <div className="space-y-6">
-                  <p className="text-xl md:text-2xl font-light text-gray-600 tracking-wide">
-                    Full-Stack Developer & Software Engineer
-                  </p>
-                  <div className="w-24 h-px bg-gradient-to-r from-violet-600 to-indigo-600 mx-auto lg:mx-0"></div>
-                  <p className="text-lg font-light text-gray-500 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Crafting seamless web and mobile applications with expertise in React, TypeScript, and Laravel.
-                    Specializing in fintech and insurance platforms with a passion for user-centric design.
-                  </p>
+                {/* Elegant Separator */}
+                <div className="flex items-center justify-center space-x-4 mt-8">
+                  <div className="w-12 h-px bg-gradient-to-r from-transparent to-violet-400"></div>
+                  <div className="w-3 h-3 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-full"></div>
+                  <div className="w-24 h-px bg-gradient-to-r from-violet-400 to-indigo-400"></div>
+                  <div className="w-2 h-2 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full"></div>
+                  <div className="w-12 h-px bg-gradient-to-r from-indigo-400 to-transparent"></div>
                 </div>
+              </div>
 
-                {/* Location & Availability */}
-                <div>
-                  <p className="text-sm font-light text-gray-400 tracking-wide mb-6">
-                    📍 Kingston, Jamaica • Currently pursuing MSc Computer Science • Available for Remote Work
-                    {/* 📍 Kingston, Jamaica | Currently pursuing MSc Computer Science | Available for Remote Work */}
-                  </p>
-                </div>
+              {/* Professional Title */}
+              <div className="space-y-4 max-w-4xl mx-auto">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-700 tracking-wide leading-relaxed">
+                  Full-Stack Developer & Software Engineer
+                </p>
+                <p className="text-lg md:text-xl font-light text-gray-500 leading-relaxed max-w-3xl mx-auto">
+                  Crafting seamless web and mobile applications with expertise in React, TypeScript, and Laravel.
+                  Specializing in fintech and insurance platforms with a passion for user-centric design.
+                </p>
+              </div>
 
-                {/* CTA */}
-                <div>
-                  <button
-                    onClick={() => scrollToSection('about')}
-                    className="group inline-flex items-center space-x-3 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-8 py-4 rounded-full font-light tracking-wide transition-all duration-500 hover:shadow-2xl hover:shadow-violet-600/25 transform hover:-translate-y-1"
-                  >
-                    <span>Explore My Work</span>
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </button>
+              {/* Elegant Info Cards */}
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl px-4 py-3 hover:shadow-lg hover:shadow-violet-100/50 transition-all duration-500">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-violet-500 rounded-full"></div>
+                    <span className="text-xs md:text-sm font-light text-gray-600 tracking-wide">📍 Kingston, Jamaica</span>
+                  </div>
                 </div>
+                <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl px-4 py-3 hover:shadow-lg hover:shadow-indigo-100/50 transition-all duration-500">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                    <span className="text-xs md:text-sm font-light text-gray-600 tracking-wide">🎓 MSc Computer Science</span>
+                  </div>
+                </div>
+                <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl px-4 py-3 hover:shadow-lg hover:shadow-purple-100/50 transition-all duration-500">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-xs md:text-sm font-light text-gray-600 tracking-wide">🌐 Available for Remote Work</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-6 pb-20">
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="group relative inline-flex items-center space-x-4 bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-light tracking-wide transition-all duration-700 hover:shadow-2xl hover:shadow-violet-600/30 transform hover:-translate-y-2 hover:scale-105"
+                >
+                  <span className="relative z-10">Explore My Work</span>
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2 relative z-10" />
+
+                  {/* Button Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-violet-400 via-indigo-400 to-purple-400 rounded-full blur opacity-0 group-hover:opacity-50 transition-opacity duration-700"></div>
+                </button>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Enhanced Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gradient-to-b from-violet-600 to-transparent rounded-full mt-2 animate-bounce"></div>
+          <div className="flex flex-col items-center space-y-2">
+            <div className="text-xs font-light text-gray-400 tracking-widest uppercase">Scroll</div>
+            <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center relative overflow-hidden">
+              <div className="w-1 h-3 bg-gradient-to-b from-violet-600 to-indigo-600 rounded-full mt-2 animate-bounce"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Social Links */}
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+          <div className="flex flex-col space-y-6">
+            {[
+              { icon: Github, href: "https://github.com/bolivthom", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/bthomas-tech/", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:bolivthom@gmail.com", label: "Email" }
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                className="group w-12 h-12 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-full flex items-center justify-center hover:bg-white hover:shadow-lg hover:shadow-violet-100/50 transition-all duration-500 transform hover:scale-110"
+                title={social.label}
+              >
+                <social.icon className="w-5 h-5 text-gray-600 group-hover:text-violet-600 transition-colors duration-300" />
+              </a>
+            ))}
+
+            {/* Connecting Line */}
+            <div className="w-px h-16 bg-gradient-to-b from-gray-300 to-transparent mx-auto"></div>
           </div>
         </div>
       </section>
