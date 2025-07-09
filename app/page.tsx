@@ -773,7 +773,7 @@ const BrittanyResumeWebsite = () => {
             {/* Footer */}
             <div className="pt-16 border-t border-white/10">
               <p className="text-gray-400 font-light">
-                © 2025 Brittany Thomas. 🇯🇲 Mi code it up nice and proper.
+                2025 Brittany Thomas 🇯🇲.
               </p>
             </div>
           </div>
