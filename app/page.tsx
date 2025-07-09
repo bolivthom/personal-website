@@ -208,7 +208,7 @@ const BrittanyResumeWebsite = () => {
                   Full-Stack Developer & Software Engineer
                 </p>
                 <p className="text-lg md:text-xl font-light text-gray-500 leading-relaxed max-w-3xl mx-auto">
-                  Crafting seamless web and mobile applications with expertise in React, TypeScript, and Laravel.
+                  Building seamless web and mobile applications with expertise in React, TypeScript, and Laravel.
                   Specializing in fintech and insurance platforms with a passion for user-centric design.
                 </p>
               </div>
