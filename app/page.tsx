@@ -224,7 +224,7 @@ const BrittanyResumeWebsite = () => {
                 <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl px-4 py-3 hover:shadow-lg hover:shadow-indigo-100/50 transition-all duration-500">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
-                    <span className="text-xs md:text-sm font-light text-gray-600 tracking-wide">🎓 MSc Computer Science</span>
+                    <span className="text-xs md:text-sm font-light text-gray-600 tracking-wide">🎓 MSc Computer Science Student</span>
                   </div>
                 </div>
                 <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl px-4 py-3 hover:shadow-lg hover:shadow-purple-100/50 transition-all duration-500">
